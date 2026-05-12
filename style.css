@@ -37,3 +37,13 @@ body {
   padding: 80px 20px;
   text-align: center;
 }
+
+.projects {
+  padding: 50px 20px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.project {
+  margin-top: 20px;
+}
