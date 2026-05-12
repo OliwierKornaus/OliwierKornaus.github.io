@@ -4,19 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Moje Portfolio</title>
+
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div id="top"></div>
-    <header class="hero">
-      <nav class="nav">
-        <a href="#top" class="logo">Oliwier Kornaus</a>
-        <a href="#contact">Kontakt</a>
-      </nav>
 
+  <body>
+    <!-- anchor top -->
+    <div id="top"></div>
+
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-glow"></div>
+
+    <!-- NAV -->
+    <nav class="nav">
+      <a href="#top" class="logo">Oliwier Kornaus</a>
+      <div>
+        <a href="#about">O mnie</a>
+        <a href="#skills">Umiejętności</a>
+        <a href="#projects">Projekty</a>
+        <a href="#contact">Kontakt</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
       <div class="hero-content">
-        <h1>Frontend Developer</h1>
-        <p>Tworzę nowoczesne, szybkie i responsywne strony internetowe</p>
+        <h1><span id="typing"></span></h1>
+
+        <p>
+          Tworzę nowoczesne, szybkie i responsywne strony internetowe
+        </p>
 
         <div class="hero-buttons">
           <a href="#projects" class="btn">Zobacz projekty</a>
@@ -25,13 +43,15 @@
       </div>
     </header>
 
-    <section class="about">
+    <!-- ABOUT -->
+    <section class="about" id="about">
       <h2>O mnie</h2>
       <p>Frontend developer uczący się tworzenia nowoczesnych stron web.</p>
       <p>Skupiam się na HTML, CSS i JavaScript.</p>
     </section>
-    
-    <section class="skills">
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
       <h2>Umiejętności</h2>
 
       <div class="skills-grid">
@@ -43,6 +63,7 @@
       </div>
     </section>
 
+    <!-- PROJECTS -->
     <section class="projects" id="projects">
       <h2>Projekty</h2>
 
@@ -57,9 +78,13 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="contact" id="contact">
       <h2>Kontakt</h2>
       <p>Email: 40484@student.atar.edu.pl</p>
     </section>
+
+    <!-- JS -->
+    <script src="script.js"></script>
   </body>
 </html>
