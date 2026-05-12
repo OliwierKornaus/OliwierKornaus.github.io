@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 
 html {
@@ -19,7 +20,9 @@ body {
   overflow-x: hidden;
 }
 
-/* NAV (glassmorphism) */
+/* =========================
+   NAV
+========================= */
 .nav {
   position: fixed;
   top: 0;
@@ -54,7 +57,9 @@ body {
   font-weight: 700;
 }
 
-/* HERO (animated gradient) */
+/* =========================
+   HERO
+========================= */
 .hero {
   height: 100vh;
   display: flex;
@@ -72,17 +77,9 @@ body {
 }
 
 @keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .hero-content h1 {
@@ -98,13 +95,15 @@ body {
   opacity: 0.85;
 }
 
-/* BUTTONS */
+/* =========================
+   BUTTONS
+========================= */
 .hero-buttons {
   margin-top: 30px;
   display: flex;
   gap: 16px;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .btn {
@@ -116,29 +115,7 @@ body {
   font-weight: 600;
 
   box-shadow: 0 10px 25px rgba(14, 165, 233, 0.25);
-  transition: all 0.3s ease;
-
-  position: relative;
-  overflow: hidden;
-}
-
-/* shine effect */
-.btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(120deg,
-      transparent,
-      rgba(255, 255, 255, 0.3),
-      transparent);
-  transition: 0.5s;
-}
-
-.btn:hover::before {
-  left: 100%;
+  transition: 0.3s ease;
 }
 
 .btn:hover {
@@ -146,29 +123,26 @@ body {
   box-shadow: 0 18px 40px rgba(14, 165, 233, 0.35);
 }
 
-/* OUTLINE BUTTON */
+/* OUTLINE */
 .btn-outline {
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.7);
   color: white;
-  box-shadow: none;
 }
 
 .btn-outline:hover {
   background: white;
   color: #0f172a;
-  border-color: white;
-  transform: translateY(-4px);
 }
 
-/* SEKCJE */
+/* =========================
+   SECTIONS
+========================= */
 section {
   padding: 100px 20px;
   max-width: 900px;
   margin: auto;
   text-align: center;
-
-  animation: fadeIn 0.8s ease-in-out;
 }
 
 h2 {
@@ -187,13 +161,17 @@ h2::after {
   border-radius: 2px;
 }
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 .about p {
   font-size: 18px;
   color: #555;
 }
 
-/* PROJECTS */
+/* =========================
+   PROJECTS
+========================= */
 .projects {
   background: #f8fafc;
   border-radius: 20px;
@@ -207,7 +185,6 @@ h2::after {
   border-radius: 12px;
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-
   transition: 0.3s ease;
 }
 
@@ -216,36 +193,9 @@ h2::after {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
-/* CONTACT */
-.contact p {
-  font-size: 18px;
-  color: #444;
-}
-
-/* ANIMATION */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 36px;
-  }
-
-  .nav {
-    padding: 15px 20px;
-  }
-}
-
+/* =========================
+   SKILLS
+========================= */
 .skills {
   padding: 100px 20px;
   max-width: 900px;
@@ -266,17 +216,90 @@ h2::after {
   border-radius: 12px;
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-
   font-weight: 600;
-  font-size: 16px;
 
   transition: 0.3s ease;
-  cursor: default;
 }
 
 .skill:hover {
   transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
   background: #0ea5e9;
   color: white;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact p {
+  font-size: 18px;
+  color: #444;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   CURSOR
+========================= */
+.cursor {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+
+  /* jasna baza */
+  background: white;
+
+  /* mocny kontrast + widoczność na gradientach */
+  mix-blend-mode: difference;
+
+  /* lekki cień żeby nie ginęło */
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.3);
+}
+
+.cursor-glow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.18),
+    transparent 70%
+  );
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .nav {
+    padding: 15px 20px;
+  }
+}
+
+.cursor {
+  pointer-events: none;
 }
