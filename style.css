@@ -32,3 +32,8 @@ body {
   text-decoration: none;
   border-radius: 8px;
 }
+
+.about {
+  padding: 80px 20px;
+  text-align: center;
+}
