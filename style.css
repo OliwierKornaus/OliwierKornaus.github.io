@@ -47,3 +47,8 @@ body {
 .project {
   margin-top: 20px;
 }
+
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+}
