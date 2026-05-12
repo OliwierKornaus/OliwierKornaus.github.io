@@ -7,28 +7,59 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="top"></div>
     <header class="hero">
-      <h1>Jan Kowalski</h1>
-      <p>Frontend Developer</p>
-      <a href="#kontakt">Kontakt</a>
+      <nav class="nav">
+        <a href="#top" class="logo">Oliwier Kornaus</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+
+      <div class="hero-content">
+        <h1>Frontend Developer</h1>
+        <p>Tworzę nowoczesne, szybkie i responsywne strony internetowe</p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn">Zobacz projekty</a>
+          <a href="#contact" class="btn btn-outline">Kontakt</a>
+        </div>
+      </div>
     </header>
+
     <section class="about">
       <h2>O mnie</h2>
-      <p>Jestem początkującym frontend developerem...</p>
+      <p>Frontend developer uczący się tworzenia nowoczesnych stron web.</p>
+      <p>Skupiam się na HTML, CSS i JavaScript.</p>
     </section>
-    <section class="projects">
+    
+    <section class="skills">
+      <h2>Umiejętności</h2>
+
+      <div class="skills-grid">
+        <div class="skill">C</div>
+        <div class="skill">C++</div>
+        <div class="skill">Java</div>
+        <div class="skill">PHP</div>
+        <div class="skill">SQL</div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
       <h2>Projekty</h2>
 
       <div class="project">
         <h3>Projekt 1</h3>
-        <p>Moja pierwsza strona internetowa.</p>
+        <p>Nowoczesna strona portfolio z animacjami i responsywnością.</p>
+      </div>
+
+      <div class="project">
+        <h3>Projekt 2</h3>
+        <p>Landing page dla aplikacji webowej.</p>
       </div>
     </section>
-    <section class="contact">
-      <h2>Kontakt</h2>
-      <p>Email: jan@example.com</p>
-    </section>
 
-    <script src="script.js"></script>
+    <section class="contact" id="contact">
+      <h2>Kontakt</h2>
+      <p>Email: 40484@student.atar.edu.pl</p>
+    </section>
   </body>
 </html>
